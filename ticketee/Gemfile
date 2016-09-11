@@ -58,4 +58,7 @@ end
 group :test do
   # Capybara for integration testing
   gem 'capybara', '~> 2.4'
+
+  # FactoryGirl for creating objects with default values for testing
+  gem 'factory_girl_rails', '~> 4.5'
 end
