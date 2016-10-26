@@ -3,8 +3,8 @@
 <header>
   <h1><%= @project.name %></h1>
 
-  <ul class="actions">     
-    <li><%= link_to 'Edit Project', edit_project_path(@project), 
+  <ul class="actions">
+    <li><%= link_to 'Edit Project', edit_project_path(@project),
       class: 'edit' %></li>
     <li><%= link_to 'Delete Project', project_path(@project),
       method: :delete,
@@ -23,3 +23,12 @@
       class: "new" %></li>
   </ul>
 </header>
+
+<ul id="tickets">
+  <% @project.tickets.each do |ticket| %>
+    <li>
+      #<%= ticket.id %> -
+      <%= link_to ticket.name, [@project, ticket] %>
+    </li>
+  <% end %>
+</ul>
