@@ -2,6 +2,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "projects";
+@import "tickets";
 @import "responsive";
 
 header {
@@ -38,7 +39,7 @@ a.new {
 
 a.edit {
   @extend .btn-primary;
-  
+
   &:before {
     @extend .fa-pencil;
   }
@@ -46,7 +47,7 @@ a.edit {
 
 a.delete {
   @extend .btn-danger;
- 
+
   &:before {
     @extend .fa-trash;
   }
